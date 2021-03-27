@@ -2,12 +2,21 @@ let myLibrary = "";
 let addBtn = document.getElementById("addBtn");
 addBtn.addEventListener("click", addBookToLibrary);
 validateLibraryExistence();
-
-function Book(title, author, numPages, status) {
+//original code implementing plain constructor
+// function Book(title, author, numPages, status) {
+//     this.title = title;
+//     this.author = author;
+//     this.numPages = numPages;
+//     this.status = status;
+// }
+//implementing class to create objects
+class Book {
+    constructor(title, author, numPages, status){
     this.title = title;
     this.author = author;
     this.numPages = numPages;
     this.status = status;
+    }
 }
 //example of prototype function, not needed for this program
 // Book.prototype.info = function () {
